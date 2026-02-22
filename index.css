@@ -144,10 +144,11 @@ hr {
 	border-radius: 10px;
 	border: none;
 	display: block;
-	font-size: 1rem;
+	font-size: 1.25rem;
 	font-weight: bold;
 	margin: 1rem auto;
 	padding: 1rem 4rem;
+	text-transform: uppercase;
 }
 
 /* ||ELEMENT */
