@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Basketball Scoreboard</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+		<h1 class="title white center upperCase">Basketball Scoreboard</h1>
+		<div class="wrapper">
+			<div class="board">
+				<div class="player blue">
+					<h2 class="player__title center upperCase">Home</h2>
+					<div class="box">
+						<p class="score" id="HomeScore">0</p>
+					</div>
+
+					<div class="addition">
+						<button class="addition__minus white" onclick="homeSubtractOne()">-</button>
+						<button class="addition__plusOne white" onclick="homeAddOne()">+1</button>
+						<button class="addition__plusTwo white" onclick="homeAddTwo()">+2</button>
+						<button class="addition__plusThree white" onclick="homeAddThree()">+3</button>
+					</div>
+				</div>
+
+				<div class="player">
+					<h2 class="player__title center upperCase red border--red">Guest</h2>
+					<div class="box border--red">
+						<p class="score red" id="GuestScore"></p>
+					</div>
+					<div class="addition">
+						<button class="addition__minus white border--red" onclick="guestSubtractOne()">
+							-
+						</button>
+						<button class="addition__plusOne white border--red" onclick="guestAddOne()">+1</button>
+						<button class="addition__plusTwo white border--red" onclick="guestAddTwo()">+2</button>
+						<button class="addition__plusThree white border--red" onclick="guestAddThree()">
+							+3
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<hr />
+
+			<button class="reset white" onclick="reset()">Reset</button>
+		</div>
+
+		<script defer src="index.js"></script>
+	</body>
+</html>
