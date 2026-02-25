@@ -28,7 +28,6 @@ body {
 	align-content: center;
 	background-color: var(--background-dark-blue);
 	display: grid;
-
 	min-height: 100vh;
 	min-height: 100dvh;
 }
@@ -41,15 +40,17 @@ button {
 
 button {
 	cursor: pointer;
-}
-
-button:hover {
-	opacity: 0.75;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
 }
 
 button:active {
 	scale: 0.95;
-	opacity: 1;
+	opacity: 0.75;
 }
 
 hr {
@@ -185,5 +186,21 @@ hr {
 @media (min-width: 650px) {
 	.board {
 		flex-direction: row;
+	}
+}
+
+@media (min-width: 900px) {
+	button:hover {
+		opacity: 0.75;
+	}
+
+	button:active {
+		opacity: 1;
+	}
+}
+
+@media (orientation: landscape) {
+	.container {
+		margin: 1rem 0;
 	}
 }

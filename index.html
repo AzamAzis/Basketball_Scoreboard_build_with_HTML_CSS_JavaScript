@@ -12,44 +12,50 @@
 		<link rel="stylesheet" href="index.css" />
 	</head>
 	<body>
-		<h1 class="title white center upperCase">Basketball Scoreboard</h1>
-		<div class="wrapper">
-			<div class="board">
-				<div class="player blue">
-					<h2 class="player__title center upperCase">Home</h2>
-					<div class="box">
-						<p class="score" id="HomeScore">0</p>
+		<div class="container">
+			<h1 class="title white center upperCase">Basketball Scoreboard</h1>
+			<div class="wrapper">
+				<div class="board">
+					<div class="player blue">
+						<h2 class="player__title center upperCase">Home</h2>
+						<div class="box">
+							<output class="score" id="HomeScore">0</output>
+						</div>
+
+						<div class="addition">
+							<button class="addition__minus white" onclick="homeSubtractOne()">-</button>
+							<button class="addition__plusOne white" onclick="homeAddOne()">+1</button>
+							<button class="addition__plusTwo white" onclick="homeAddTwo()">+2</button>
+							<button class="addition__plusThree white" onclick="homeAddThree()">+3</button>
+						</div>
 					</div>
 
-					<div class="addition">
-						<button class="addition__minus white" onclick="homeSubtractOne()">-</button>
-						<button class="addition__plusOne white" onclick="homeAddOne()">+1</button>
-						<button class="addition__plusTwo white" onclick="homeAddTwo()">+2</button>
-						<button class="addition__plusThree white" onclick="homeAddThree()">+3</button>
+					<div class="player">
+						<h2 class="player__title center upperCase red border--red">Guest</h2>
+						<div class="box border--red">
+							<output class="score red" id="GuestScore">0</output>
+						</div>
+						<div class="addition">
+							<button class="addition__minus white border--red" onclick="guestSubtractOne()">
+								-
+							</button>
+							<button class="addition__plusOne white border--red" onclick="guestAddOne()">
+								+1
+							</button>
+							<button class="addition__plusTwo white border--red" onclick="guestAddTwo()">
+								+2
+							</button>
+							<button class="addition__plusThree white border--red" onclick="guestAddThree()">
+								+3
+							</button>
+						</div>
 					</div>
 				</div>
 
-				<div class="player">
-					<h2 class="player__title center upperCase red border--red">Guest</h2>
-					<div class="box border--red">
-						<p class="score red" id="GuestScore"></p>
-					</div>
-					<div class="addition">
-						<button class="addition__minus white border--red" onclick="guestSubtractOne()">
-							-
-						</button>
-						<button class="addition__plusOne white border--red" onclick="guestAddOne()">+1</button>
-						<button class="addition__plusTwo white border--red" onclick="guestAddTwo()">+2</button>
-						<button class="addition__plusThree white border--red" onclick="guestAddThree()">
-							+3
-						</button>
-					</div>
-				</div>
+				<hr />
+
+				<button class="reset white" onclick="reset()" tabindex="-1">Reset</button>
 			</div>
-
-			<hr />
-
-			<button class="reset white" onclick="reset()">Reset</button>
 		</div>
 
 		<script defer src="index.js"></script>
